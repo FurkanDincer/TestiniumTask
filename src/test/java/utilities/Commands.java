@@ -34,7 +34,7 @@ public class Commands {
             }
         } while (timer < duration);
         if (timer == duration) {
-            System.out.println(webElement + " is not able to send keys");
+            Log.info(webElement + " is not able to send keys");
             throw new NoSuchElementException();
         }
     }
@@ -54,7 +54,7 @@ public class Commands {
             }
         } while (timer < duration);
         if (timer == duration) {
-            System.out.println(webElement + " is not clickable");
+            Log.info(webElement + " is not clickable");
             throw new NoSuchElementException();
         }
     }
@@ -104,7 +104,7 @@ public class Commands {
             }
         } while (timer < duration);
         if (timer == duration) {
-            System.out.println(key + " is not clicked");
+            Log.info(key + " is not clicked");
         }
         waitfor(1);
     }

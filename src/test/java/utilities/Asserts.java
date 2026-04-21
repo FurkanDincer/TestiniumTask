@@ -10,7 +10,7 @@ public class Asserts {
             try {
                 Wait.waitfor(interval);
                 Assert.assertTrue(webElement.isDisplayed());
-                System.out.println("ASSERTION PASSED : " + "Expected: " + webElement + ", is displayed");
+                Log.info("ASSERTION PASSED : " + "Expected: " + webElement + ", is displayed");
                 //Commands.getScreenhotForPassedAssertion();
                 break;
             } catch (Exception | AssertionError e) {
@@ -19,7 +19,7 @@ public class Asserts {
             }
         } while (timer < duration);
         if (timer == duration) {
-            System.out.println("ASSERTION ERROR : " + webElement + " is not displayed");
+            Log.info("ASSERTION ERROR : " + webElement + " is not displayed");
             Assert.fail();
         }
     }
@@ -28,8 +28,7 @@ public class Asserts {
         do {
             try {
                 Assert.assertEquals(expected.toUpperCase(), actual.toUpperCase());
-                System.out.println("ASSERTION PASSED : " + "Expected: " + expected + ", Actual: " + actual);
-                //Commands.getScreenhotForPassedAssertion();
+                Log.info("ASSERTION PASSED : " + "Expected: " + expected + ", Actual: " + actual);
                 break;
             } catch (AssertionError e) {
                 Wait.waitfor(interval);
@@ -37,7 +36,7 @@ public class Asserts {
             }
         } while (timer < duration);
         if (timer == duration) {
-            System.out.println("ASSERTION ERROR : " + "Expected: " + expected + ", Actual: " + actual);
+            Log.info("ASSERTION ERROR : " + "Expected: " + expected + ", Actual: " + actual);
             Assert.fail();
         }
     }
@@ -46,8 +45,7 @@ public class Asserts {
         do {
             try {
                 Assert.assertEquals(expected, actual);
-                System.out.println("ASSERTION PASSED : " + "Expected: " + expected + ", Actual: " + actual);
-                //Commands.getScreenhotForPassedAssertion();
+                Log.info("ASSERTION PASSED : " + "Expected: " + expected + ", Actual: " + actual);
                 break;
             } catch (AssertionError e) {
                 Wait.waitfor(interval);
@@ -55,7 +53,7 @@ public class Asserts {
             }
         } while (timer < duration);
         if (timer == duration) {
-            System.out.println("ASSERTION ERROR : " + "Expected: " + expected + ", Actual: " + actual);
+            Log.info("ASSERTION ERROR : " + "Expected: " + expected + ", Actual: " + actual);
             Assert.fail();
         }
     }

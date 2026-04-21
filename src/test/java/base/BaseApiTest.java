@@ -19,10 +19,8 @@ public class BaseApiTest {
 
     @BeforeAll
     public static void apiSetup() {
-        // 1. Dil Ayarı (Kritik i/ı hatasını önlemek için)
         Locale.setDefault(Locale.ENGLISH);
 
-        // 2. Extent Reports Kurulumu (UI projesindeki ile aynı mantık)
         if (extent == null) { // Eğer rapor henüz başlatılmamışsa başlat
             ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ApiReport.html");
             extent = new ExtentReports();
@@ -30,8 +28,6 @@ public class BaseApiTest {
             extent.setSystemInfo("Environment", "QA");
             extent.setSystemInfo("Tester", "QA Automation Engineer");
         }
-
-        // 3. API Ayarları
         RestAssured.baseURI = "https://api.trello.com/1";
         apiKey = ConfigurationReader.get("trello_key");
         token = ConfigurationReader.get("trello_token");

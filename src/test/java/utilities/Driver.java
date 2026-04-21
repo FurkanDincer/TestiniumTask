@@ -16,7 +16,7 @@ import java.util.Map;
 public class Driver {
     private static WebDriver driver;
 
-    private Driver() {} // Kimse dışarıdan "new" yapamasın (Singleton)
+    private Driver() {}
 
     public static WebDriver getDriver() {
         String browser = ConfigurationReader.get("browser");

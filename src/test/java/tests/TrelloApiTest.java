@@ -33,7 +33,7 @@ public class TrelloApiTest extends BaseApiTest {
                 .post("/boards")
                 .then()
                 .statusCode(200)
-                .extract().response(); // SADECE BURAYI DEĞİŞTİRDİK (path("id") yerine response() yazdık)
+                .extract().response();
 
         response.prettyPrint();
         boardId = response.path("id");
@@ -53,7 +53,7 @@ public class TrelloApiTest extends BaseApiTest {
                 .get("/boards/{boardId}/lists")
                 .then()
                 .statusCode(200)
-                .extract().response(); // TÜM YANITI ALIYORUZ
+                .extract().response();
 
         response.prettyPrint();
         listId = response.path("[0].id");
@@ -71,7 +71,7 @@ public class TrelloApiTest extends BaseApiTest {
         // --- Create 1.Card ---
         Response response1 = given()
                 .queryParam("name", "Card-1")
-                .queryParam("idList", listId) // Bir önceki adımda aldığımız liste ID'si
+                .queryParam("idList", listId)
                 .queryParam("key", apiKey)
                 .queryParam("token", token)
                 .contentType(ContentType.JSON)
@@ -101,7 +101,7 @@ public class TrelloApiTest extends BaseApiTest {
 
         cardId2 = response2.path("id");
         test.info("Cart 2 Created. ID: " + cardId2);
-        response2.prettyPrint(); // Konsola yazdıralım
+        response2.prettyPrint();
 
         test.pass("Two Cart Created Successfully");
         Log.info("Cards created: " + cardId1 + " and " + cardId2);
@@ -124,7 +124,7 @@ public class TrelloApiTest extends BaseApiTest {
                 .queryParam("token", token)
                 .contentType(ContentType.JSON)
                 .when()
-                .put("/cards/{id}", cardToUpdate) // Path param olarak ID'yi geçiyoruz
+                .put("/cards/{id}", cardToUpdate)
                 .then()
                 .statusCode(200)
                 .extract().response();
@@ -174,7 +174,7 @@ public class TrelloApiTest extends BaseApiTest {
                 .when()
                 .delete("/boards/{id}")
                 .then()
-                .log().all() // Hata alırsan nedenini burada görürsün
+                .log().all()
                 .statusCode(200)
                 .extract().response();
         response.prettyPrint();

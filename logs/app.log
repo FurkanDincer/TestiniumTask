@@ -328,3 +328,41 @@
 2026-04-21 22:48:36.033 [main] INFO  utilities.Log - Cards created: 69e7d4938313c1adaadc20a8 and 69e7d49380cd431b8731f3aa
 2026-04-21 22:48:36.527 [main] INFO  utilities.Log - Updated card ID: 69e7d4938313c1adaadc20a8
 2026-04-21 22:48:37.551 [main] INFO  utilities.Log - Cards deleted: 69e7d4938313c1adaadc20a8 and 69e7d49380cd431b8731f3aa
+2026-04-21 23:09:24.310 [main] INFO  utilities.Log - Tüm Çerezler Reddedildi
+2026-04-21 23:09:33.146 [main] INFO  utilities.Log - Value Sort: Şort
+2026-04-21 23:09:39.577 [main] INFO  utilities.Log - Value Sort: Gömlek
+2026-04-21 23:09:43.189 [main] INFO  utilities.Log - Random Number is: 40
+2026-04-21 23:09:47.930 [main] INFO  utilities.Log - Product Details: REGULAR FIT KETEN-PAMUK GÖMLEK
+2026-04-21 23:09:51.087 [main] INFO  utilities.Log - Product Price: 1.790,00 TL
+2026-04-21 23:09:52.188 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:52.190 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:52.192 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:52.195 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:52.197 [main] INFO  utilities.Log - Attribute: size-low-on-stock
+2026-04-21 23:09:58.023 [main] INFO  utilities.Log - Product Price on Add To Cart Page: 1.790,00 TL
+2026-04-21 23:09:58.027 [main] INFO  utilities.Log - ASSERTION PASSED : Expected: 1.790,00 TL, Actual: 1.790,00 TL
+2026-04-21 23:09:59.151 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:59.153 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:59.155 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:59.158 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:09:59.160 [main] INFO  utilities.Log - Attribute: size-low-on-stock
+2026-04-21 23:10:03.846 [main] INFO  utilities.Log - ASSERTION PASSED : Expected: [[ChromeDriver: chrome on mac (0f1c3874889f806244df74ff3ec70c0a)] -> xpath: //div[@class='zds-empty-state__title']//span], is displayed
+2026-04-21 23:10:04.202 [main] INFO  utilities.Log - Report Created: test-output/ExtentReport.html
+2026-04-21 23:20:10.776 [main] INFO  utilities.Log - Tüm Çerezler Reddedildi
+2026-04-21 23:20:15.423 [main] INFO  utilities.Log - Value Sort: Şort
+2026-04-21 23:20:21.460 [main] INFO  utilities.Log - Value Sort: Gömlek
+2026-04-21 23:20:25.057 [main] INFO  utilities.Log - Random Number is: 61
+2026-04-21 23:20:29.909 [main] INFO  utilities.Log - Product Details: SLIM FIT GÖMLEK
+2026-04-21 23:20:33.067 [main] INFO  utilities.Log - Product Price: 1.790,00 TL
+2026-04-21 23:20:34.166 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:34.169 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:34.171 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:34.173 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:39.916 [main] INFO  utilities.Log - Product Price on Add To Cart Page: 1.790,00 TL
+2026-04-21 23:20:39.920 [main] INFO  utilities.Log - ASSERTION PASSED : Expected: 1.790,00 TL, Actual: 1.790,00 TL
+2026-04-21 23:20:41.039 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:41.041 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:41.044 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:41.046 [main] INFO  utilities.Log - Attribute: size-in-stock
+2026-04-21 23:20:45.988 [main] INFO  utilities.Log - ASSERTION PASSED : Expected: [[ChromeDriver: chrome on mac (d2b72d62d5221dc106d9a38516e8d5bb)] -> xpath: //div[@class='zds-empty-state__title']//span], is displayed
+2026-04-21 23:20:46.328 [main] INFO  utilities.Log - Report Created: test-output/ExtentReport.html

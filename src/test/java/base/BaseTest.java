@@ -8,10 +8,8 @@ import org.openqa.selenium.WebDriver;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import utilities.Log;
-import utilities.ScreenshotUtils;
 
 import java.io.File;
-import java.sql.DriverManager;
 import java.util.Locale;
 
 public class BaseTest {
@@ -22,10 +20,8 @@ public class BaseTest {
     @BeforeAll
     public static void setupReport() {
         Locale.setDefault(Locale.ENGLISH);
-        // Projenin çalıştığı klasörü dinamik olarak alalım
         String path = System.getProperty("user.dir") + File.separator + "test-output" + File.separator + "ExtentReport.html";
 
-        // Klasörün var olduğundan emin olalım
         File folder = new File(System.getProperty("user.dir") + File.separator + "test-output");
         if (!folder.exists()) {
             folder.mkdirs();

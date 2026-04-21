@@ -3,10 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.Asserts;
-import utilities.Commands;
-import utilities.Driver;
-import utilities.Log;
+import utilities.*;
 
 import java.util.List;
 
@@ -65,6 +62,5 @@ public class AddToCartPage {
 
     public void verifySepetinizBosText(){
         Asserts.assertIsDisplayed(sepetinizBosAlert,3,1);
-
     }
 }
