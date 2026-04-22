@@ -28,17 +28,16 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='layout-actionable layout-desktop-account-action layout-header-desktop-action-account link']")
     private WebElement loginButton;
 
-    @FindBy(xpath = "//input[@name='username']")
+    @FindBy(name = "username")
     private WebElement usernameTextbox;
 
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement devamEtButton;
     @FindBy(xpath = "//span[.='Şifre ile giriş yapın']")
     private WebElement sifreIleGirisYapinButton;
-
-    @FindBy(xpath = "//input[@name='password']")
+    @FindBy(name = "password")
     private WebElement passwordTextbox;
-    @FindBy(xpath = "//button[@id='react-aria5512956832-:r18:']")
+    @FindBy(id = "react-aria5512956832-:r18:")
     private WebElement oturumAcButton;
     @FindBy(xpath = "(//div[@class='animated-hamburger-ss26'])[2]")
     private WebElement hambergerMenuButton;

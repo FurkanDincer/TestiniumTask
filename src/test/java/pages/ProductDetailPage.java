@@ -24,14 +24,11 @@ public class ProductDetailPage {
     private List<WebElement> productList;
     @FindBy(xpath = "//h1[@data-qa-qualifier='product-detail-info-name']")
     private WebElement productDetailsOnProductPage;
-
     @FindBy(xpath = "//div[@class='product-detail-info__price']")
     private WebElement productPriceOnProductPage;
-
     @FindBy(xpath = "//button[@data-qa-action='add-to-cart']")
     private WebElement ekleButton;
-
-    @FindBy(xpath = "//li//button[@class='size-selector-sizes-size__button']")
+    @FindBy(className = "size-selector-sizes-size__button")
     private List<WebElement> productSizeList;
 
     public void searchForSortProduct() {

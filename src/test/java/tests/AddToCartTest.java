@@ -7,14 +7,14 @@ import base.BaseTest;
 import pages.ProductDetailPage;
 import utilities.Driver;
 
-public class LoginTest extends BaseTest {
+public class AddToCartTest extends BaseTest {
     HomePage homePage = new HomePage();
     ProductDetailPage productDetailPage=new ProductDetailPage();
     AddToCartPage addToCartPage=new AddToCartPage();
 
 
     @Test
-    public void loginTestFlow() throws Exception {
+    public void zaraAddToCartFlowTest() throws Exception {
         test = extent.createTest("Zara WebSite Automation", "Search Product, Add to Cart");
         test.info("Test Started");
 
@@ -28,13 +28,11 @@ public class LoginTest extends BaseTest {
         productDetailPage.searchForSortProduct();
         productDetailPage.clearSearchBox();
 
-
         homePage.clickHamburgerIcon();
         homePage.clickErkekSection();
         homePage.clickTumunuGorSection();
         productDetailPage.searchForGomlekProduct();
         productDetailPage.selectRandomProduct();
-
         productDetailPage.writeToProductDetails();
         productDetailPage.clickEkleButton();
 

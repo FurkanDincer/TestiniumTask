@@ -28,7 +28,7 @@ public class AddToCartPage {
     @FindBy(xpath = "//div[@class='zds-empty-state__title']//span")
     private WebElement sepetinizBosAlert;
 
-    @FindBy(xpath = "//button[@class='shop-cart-item-actions__dismiss']")
+    @FindBy(className = "shop-cart-item-actions__dismiss")
     private List<WebElement> deleteButtonList;
 
 
