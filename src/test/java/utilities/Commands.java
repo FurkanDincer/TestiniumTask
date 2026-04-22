@@ -1,6 +1,5 @@
 package utilities;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -39,7 +38,7 @@ public class Commands {
         }
     }
 
-    public static void waitAndClick(WebElement webElement, int duration, int interval) {
+    public static void clickWebelement(WebElement webElement, int duration, int interval) {
         int timer = 0;
         do {
             try {
@@ -58,23 +57,6 @@ public class Commands {
             throw new NoSuchElementException();
         }
     }
-
-    public static void clearWebElement(WebElement webElement) {
-        try {
-            if (webElement.isDisplayed()) {
-                Commands.moveToElement(webElement);
-                webElement.clear();
-            }
-        } catch (Exception e) {
-            waitfor(1);
-            if (webElement.isDisplayed()) {
-                Commands.moveToElement(webElement);
-                webElement.clear();
-            }
-        }
-        waitfor(2);
-    }
-
     public static void moveToElement(WebElement webElement) {
         Actions actions = new Actions(Driver.getDriver());
         try {

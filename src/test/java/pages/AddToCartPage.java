@@ -7,7 +7,9 @@ import utilities.*;
 
 import java.util.List;
 
+import static pages.ProductDetailPage.priceOnProductPage;
 import static utilities.Asserts.assertEqualsIgnoreCase;
+import static utilities.Commands.*;
 
 public class AddToCartPage {
 
@@ -33,13 +35,13 @@ public class AddToCartPage {
 
 
     public void clickAlisverisSepetiniGorButton() {
-        Commands.waitAndClick(alisverisSepetiniGorButton, 3, 1);
+        clickWebelement(alisverisSepetiniGorButton, 3, 1);
     }
 
     public void verifyProductPrice() throws Exception {
-        String expectedProductPrice = Commands.getTextofaWebElement(productPriceOnAddToCartPage);
+        String expectedProductPrice = getTextofaWebElement(productPriceOnAddToCartPage);
         Log.info("Product Price on Add To Cart Page: " + expectedProductPrice);
-        assertEqualsIgnoreCase(expectedProductPrice, ProductDetailPage.priceOnProductPage, 3, 1);
+        assertEqualsIgnoreCase(expectedProductPrice, priceOnProductPage, 3, 1);
     }
 
     public void addOneMoreProduct() throws InterruptedException {
@@ -49,14 +51,14 @@ public class AddToCartPage {
     }
 
     public void verifyProductNumber() throws Exception {
-        String actualNumberOfProduct=Commands.getTextofaWebElement(numberOfProductOnCartPage);
+        String actualNumberOfProduct= getTextofaWebElement(numberOfProductOnCartPage);
         Log.info("Number of Product: "+actualNumberOfProduct);
         assertEqualsIgnoreCase("2",actualNumberOfProduct,3,1);
     }
 
     public void deleteProducts(){
         for (int i = 0; i < deleteButtonList.size(); i++) {
-            Commands.waitAndClick(deleteButtonList.get(i),3,1);
+            clickWebelement(deleteButtonList.get(i),3,1);
         }
     }
 

@@ -1,20 +1,14 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import utilities.Commands;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import utilities.Log;
 
-import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.time.Duration;
+import static utilities.Commands.*;
 
 public class HomePage {
 
@@ -47,33 +41,33 @@ public class HomePage {
     private WebElement tumunuGorSection;
 
     public void rejectCookies() {
-        Commands.waitAndClick(rejectAllCookies, 3, 1);
+        clickWebelement(rejectAllCookies, 3, 1);
         Log.info("Tüm Çerezler Reddedildi");
     }
 
     public void clickGirisYapButton() {
-        Commands.waitAndClick(loginButton, 3, 1);
+        clickWebelement(loginButton, 3, 1);
         Log.info("Giriş Yap Butonuna Tıklandı");
     }
 
 
     public void login() throws InterruptedException {
-        Commands.waitAndClick(usernameTextbox, 3, 1);
-        Commands.actionsSendKeys(usernameTextbox,ConfigurationReader.get("username"),3,1);
-        Commands.waitAndClick(devamEtButton, 3, 1);
-        Commands.waitAndClick(sifreIleGirisYapinButton,3,1);
-        Commands.actionsSendKeys(usernameTextbox,ConfigurationReader.get("password"),3,1);
-        Commands.waitAndClick(oturumAcButton, 3, 1);
+        clickWebelement(usernameTextbox, 3, 1);
+        actionsSendKeys(usernameTextbox,ConfigurationReader.get("username"),3,1);
+        clickWebelement(devamEtButton, 3, 1);
+        clickWebelement(sifreIleGirisYapinButton,3,1);
+        actionsSendKeys(usernameTextbox,ConfigurationReader.get("password"),3,1);
+        clickWebelement(oturumAcButton, 3, 1);
         Log.info("Login Olundu");
     }
 
     public void clickHamburgerIcon() {
-        Commands.waitAndClick(hambergerMenuButton,3,1);
+        clickWebelement(hambergerMenuButton,3,1);
     }
     public void clickErkekSection(){
-        Commands.waitAndClick(erkekSection,3,1);
+        clickWebelement(erkekSection,3,1);
     }
     public void clickTumunuGorSection(){
-        Commands.waitAndClick(tumunuGorSection,3,1);
+        clickWebelement(tumunuGorSection,3,1);
     }
 }
